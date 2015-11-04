@@ -1,0 +1,15 @@
+{
+  "name": "ExpressApp",
+  "version": "0.0.0",
+  "description": "ExpressApp",
+  "main": "app.js",
+  "author": {
+    "name": "rafae",
+    "email": ""
+  },
+  "dependencies": {
+    "express": "3.4.4",
+    "jade": "*",
+    "stylus": "*"
+  }
+}

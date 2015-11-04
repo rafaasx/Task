@@ -1,0 +1,44 @@
+﻿<h2>Index</h2>
+
+<div ng-app="myApp">
+    <div class="widget-box" id="recent-box" ng-controller="tasksController as ctr">
+        <div class="widget-header header-color-blue">
+            <div class="row">
+                <div class="col-sm-6">
+                    <h4 class="bigger lighter"><i class="glyphicon glyphicon-align-justify"></i>Gerenciador de Tarefas</h4>
+                </div>
+                <div class="col-sm-3">
+                    <button class="btn btn-sm btn-danger header-elements-margin" ng-click="addNewClicked=!addNewClicked;" style="visibility: hidden"><i class="glyphicon glyphicon-plus"></i>Adicionar Tarefa</button>
+                </div>
+                <div class="col-sm-3">
+                    <input class="form-control search header-elements-margin" type="text" placeholder="Filter Tasks" ng-model="filtro" />
+                </div>
+            </div>
+        </div>
+        <div class="widget-body ">
+            <form class="add-task" id="newTaskForm">
+                <div class="form-actions">
+                    <div class="input-group">
+                        <input type="text" class="form-control ng-pristine ng-valid" name="comment" ng-model="tarefa.TASK" placeholder="Adicionar Tarefa" ng-focus="addNewClicked">
+                        <div class="input-group-btn">
+                            <button class="btn btn-default" type="submit" ng-click="addTask(tarefa.TASK)"><i class="glyphicon glyphicon-plus"></i>Add New Task</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <div class="task">
+                <label class="checkbox" ng-repeat="tarefa in tasks | filter:{TASK:filtro}">
+                    <input type="checkbox" ng-model="tarefa.STATUS" />
+                    <span>{{tarefa.TASK}} [{{tarefa.ID}}]</span>
+                    <a ng-click="deleteTask(tarefa)" class="pull-right"><i class="glyphicon glyphicon-trash"></i></a>
+
+                </label>
+            </div>
+        </div>
+        <h2>"{{tasks}}"</h2>
+    </div>
+</div>
+<script src="~/MyJS/Home.js"></script>
+<!--<script type="text/javascript">
+    new HomeViewModel();
+</script>-->
