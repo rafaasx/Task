@@ -5,6 +5,8 @@
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
     <Name>Task</Name>
     <RootNamespace>Task</RootNamespace>
+    <LaunchUrl>
+    </LaunchUrl>
   </PropertyGroup>
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -21,7 +23,7 @@
     <ProjectTypeGuids>{3AF33F2E-1136-4D97-BBB7-1795711AC8B8};{349c5851-65df-11da-9384-00065b846f21};{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}</ProjectTypeGuids>
     <ProjectView>ShowAllFiles</ProjectView>
     <NodejsPort>1337</NodejsPort>
-    <StartWebBrowser>true</StartWebBrowser>
+    <StartWebBrowser>True</StartWebBrowser>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -43,12 +45,13 @@
     <Content Include="public\stylesheets\bootstrap.min.css" />
     <Content Include="public\stylesheets\style.css" />
     <Content Include="public\stylesheets\style.styl" />
+    <Content Include="public\stylesheets\taskman.css" />
     <Content Include="README.md" />
-    <Content Include="views\home.html" />
-    <Content Include="views\index.html" />
-    <Content Include="views\index.jade" />
-    <Content Include="views\layout.jade" />
-    <Content Include="views\error.jade" />
+    <Content Include="public\views\home.html" />
+    <Content Include="public\views\index.html" />
+    <Content Include="public\views\index.jade" />
+    <Content Include="public\views\layout.jade" />
+    <Content Include="public\views\error.jade" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="bin\" />
@@ -57,7 +60,7 @@
     <Folder Include="public\javascripts\" />
     <Folder Include="public\stylesheets\" />
     <Folder Include="routes\" />
-    <Folder Include="views\" />
+    <Folder Include="public\views\" />
   </ItemGroup>
   <!-- Do not delete the following Import Project.  While this appears to do nothing it is a marker for setting TypeScript properties before our import that depends on them. -->
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="False" />

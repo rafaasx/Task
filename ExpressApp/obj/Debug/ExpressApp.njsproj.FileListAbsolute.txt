@@ -1,0 +1,2 @@
+C:\Users\rafae\Documents\GitHub\Task\ExpressApp\bin\Microsoft.NodejsTools.WebRole.dll
+C:\Users\rafae\Documents\GitHub\Task\ExpressApp\obj\Debug\ExpressApp.njsprojResolveAssemblyReference.cache

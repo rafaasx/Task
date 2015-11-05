@@ -4,13 +4,13 @@
  */
 
 exports.index = function (req, res) {
-    res.render('index', { title: 'Express', year: new Date().getFullYear() });
+	res.render('index', { title: 'ejs' });
 };
 
 exports.about = function (req, res) {
-    res.render('about', { title: 'About', year: new Date().getFullYear(), message: 'Your application description page' });
+	res.render('about', { title: 'ejs' });
 };
 
 exports.contact = function (req, res) {
-    res.render('contact', { title: 'Contact', year: new Date().getFullYear(), message: 'Your contact page' });
+	res.render('contact', { title: 'ejs' });
 };

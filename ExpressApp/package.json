@@ -8,7 +8,10 @@
     "email": ""
   },
   "dependencies": {
+    "ejs": "^2.3.4",
     "express": "3.4.4",
+    "html": "0.0.10",
+    "html5": "^1.0.5",
     "jade": "*",
     "stylus": "*"
   }
